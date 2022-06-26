@@ -464,7 +464,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
-    justify-items:center;
+    justify-items: center;
 }
 .serviciosMain__sectionProgramas1__div{
     text-align: center;
@@ -506,8 +506,8 @@ body{
 }
 .serviciosMain__section2__div--img{
     display:inline-block;
-    width: 25%;
-    height: 25%;
+    width: 15%;
+    height: 15%;
     border-radius: 10px;
 }
 .serviciosMain__section2__div--p{
@@ -520,8 +520,7 @@ body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1fr;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-items: center;
 }
 .serviciosMain__section3__div--img{
     width: 40%;
