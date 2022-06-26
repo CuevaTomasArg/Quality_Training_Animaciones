@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="custom.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../Formulario_Contacto_Bootstrap_Jquery_PHP/">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">          
+    <link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'> 
+    <title>Contacto</title>
+</head>
+<body>
+        <!-- Aca comienza el header -->
+        <header >
+            <nav class="header">
+                <div class="header__div">
+                    <ul class="header__div__list">
+                        <li class="header__div__list__li">
+                            <a href="../index.html" target="_self" class="header__div__list__li--link">
+                                <img src="../imagenes/logo_quality.png" alt="Acá debe de estar el logo_quality" class="header__div__list__li--image">
+                            </a>
+                        </li>
+                        <li class="headerDesplegable">
+                            <a href="#" class="headerDesplegable--link">
+                                <img src="../imagenes/header_svgMenu.svg" alt="Menu" class="headerDesplegable__link--img">
+                            </a>
+                            <ul class="headerDesplegable__list">
+                                <li class="headerDesplegable__list__li"><a href="beneficios.html" target="_self" class="headerDesplegable__list__li--link">Beneficios</a></li>
+                                <li class="headerDesplegable__list__li"><a href="contacto.html" target="_self" class="headerDesplegable__list__li--link">Contacto</a></li>
+                                <li class="headerDesplegable__list__li"><a href="software.html" target="_self" class="headerDesplegable__list__li--link">Software</a></li>
+                                <li class="headerDesplegable__list__li"><a href="servicios.html" target="_self" class="headerDesplegable__list__li--link">Servicios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    <!-- INICIO dentro de todo esto, esta el cuerpo del programa -->
+    <main >
+        <section class="formulario">
+            <form method="POSt" name="fcontacto" id="fcontacto" action="./">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label>Tu nombre:</label>
+                        <input type="text" name="name" id="name" class="form-control">
+                    </div>
+
+                    <div class="col-md-6">
+                        <label>Tu Email:</label>
+                        <input type="text" name="email" id="email" class="form-control">
+                    </div>
+                </div>
+                <label>Asunto:</label>
+                <input type="text" name="asunto" id="asunto" class="form-control">
+                <label>Tu Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="form-control"></textarea>
+                <input type="submit" class="btn btn-info" value="Enviar">
+
+                <div id="respuesta" style="display: none;"></div>
+            </form>
+        </section>
+    </main>
+    <!-- FIN dentro de todo esto, esta el cuerpo del programa -->
+    <!-- Aca comienza el footer -->    
+    <footer class="footer">
+        <div class="footer__divIzquierdo">
+            <nav class="footer__divIzquierdo__navPNG"> 
+                <ul class="footer__divIzquierdo__navPNG__list">
+                    <li class="footer__divIzquierdo__navPNG__list__li">
+                        <a href="https://www.instagram.com/quality_tr4ining/" target="_blank" class="footer__divIzquierdo__navPNG__list__li__link">
+                            <img src="../imagenes/instagram.svg" alt="png de instagram" class="footer__divIzquierdo__navPNG__list__li__link--png">
+                        </a>
+                    </li>
+                    <li class="footer__divIzquierdo__navPNG__list__li">
+                        <a href="https://api.whatsapp.com/send?phone=541157209517" target="_blank" class="footer__divIzquierdo__navPNG__list__li__link">
+                            <img src="../imagenes/whatsapp.svg" alt="png de whatsapp" class="footer__divIzquierdo__navPNG__list__li__link--png">
+                        </a>
+                    </li>
+                    <li class="footer__divIzquierdo__navPNG__list__li">
+                        <a href="https://www.instagram.com/direct/t/340282366841710300949128192619813642914" target="_blank" class="footer__divIzquierdo__navPNG__list__li__link">
+                            <img src="../imagenes/email.svg" alt="png de mensajeria con el instagram" class="footer__divIzquierdo__navPNG__list__li__link--png">
+                        </a>
+                    </li>
+                    <li class="footer__divIzquierdo__navPNG__list__li">
+                        <a href="https://linktr.ee/quality_tr4ining" target="_blank" class="footer__divIzquierdo__navPNG__list__li__link">
+                            <img src="../imagenes/link.svg" alt="png de linktree" class="footer__divIzquierdo__navPNG__list__li__link--png">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="footer__divIzquierdo__navHerramientas">
+                <ul class="footer__divIzquierdo__navHerramientas__list">
+                    <li class="footer__divIzquierdo__navHerramientas__list__li"><a href="" ></a>Recursos humanos</li> <!--aca va el linl de los formularios y las direcciones a otras paginas de los profesionales-->
+                    <li class="footer__divIzquierdo__navHerramientas__list__li"><a href="" ></a>Contactanos</li>
+                    <li class="footer__divIzquierdo__navHerramientas__list__li"><a href="" ></a>Donde encontrarnos</li>
+                    <li class="footer__divIzquierdo__navHerramientas__list__li"><a href="" ></a>Blog nutrición</li>
+                    <li class="footer__divIzquierdo__navHerramientas__list__li"><a href="" ></a>Blog entrenamiento</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__divDerecho">
+            <nav class="footer__divDerecho__nav">
+                <ul class="footer__divDerecho__nav__list">
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://www.instagram.com/ginkgogym/"  target="_blank">
+                            <img src="../imagenes/ginkgo.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://halcon.turnosweb.com/"  target="_blank">
+                            <img src="../imagenes/halcom.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://horuscross.turnosweb.com/"  target="_blank">
+                            <img src="../imagenes/horus.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://www.instagram.com/opengym_oficial/?hl=es-la"  target="_blank">
+                            <img src="../imagenes/open_gim.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://www.instagram.com/tempestafitnesslab/"  target="_blank">
+                            <img src="../imagenes/tempesta.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                    <li class="footer__divDerecho__nav__list__li">
+                        <a href="https://www.instagram.com/vikingosgym_/?hl=es"  target="_blank">
+                            <img src="../imagenes/vikingos.PNG" alt="Logo/empresa/Socia" class="footer__divDerecho__nav__list__li--image">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
