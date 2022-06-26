@@ -41,7 +41,6 @@ TIPOGRAFIA
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: center;
     list-style-type:none;
     margin: 5px 32px;
     padding: 10px;
@@ -96,7 +95,6 @@ TIPOGRAFIA
     opacity: 0;
     transition: opacity .20s ease .1s;
 }
-
 .headerDesplegable__list__li{
     display:inline-block;
     margin: 16px auto;
@@ -569,10 +567,22 @@ body{
 .formulario form{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     border: 2px solid #000;
     border-radius: 10px;
     background-color: #464646;
+}
+.row div{
+    margin:10px 10px
+}
+.form-control{
+    width:90%;
+    margin:auto;
+}
+.btn{
+    background-color: #96c4c4;
+    width: 50%;
+    margin:10px auto
 }
 /* -----------------------------------------------CONTACTO----------------------------------------------- */
 
