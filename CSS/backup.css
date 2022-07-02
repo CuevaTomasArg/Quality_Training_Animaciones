@@ -1,0 +1,797 @@
+*{
+    padding:0;
+    margin:0;
+}
+/* Valores absoltos: margin y padding 
+Valores relativos: grid*/
+/* PALETA DE COLORES
+Celeste
+#96c4c4
+#aedddd
+#c7f7f7
+#e4FBFB
+#ffffff
+
+TIPOGRAFIA
+    Helvetica -->Encabezado, cartel informativo USAR -----------------------
+    Serif -->Texto corto de la pagina
+    Calibri -->informacion
+    Chunkfive
+    verone -->Articulo cientifico
+    quicksand -->Quicksand parrafos
+    abril fatface --> USAR PARA CTA--------------------------
+    roboto--> texto largo USAR--------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Roboto:wght@300&display=swap');
+
+/* SECCION DE HEADER, */
+.header{
+    padding:1px ;
+    border-bottom: 1px solid #000000;
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+    background-color:#292929; /* La idea de esta parte es hacer un menu con degrade y que posteriormente se puede extender hacia la primera parte del body*/
+    font-family:'Roboto', sans-serif;
+}
+.header__div{
+    padding-bottom: 10px;
+}
+.header__div__list{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    list-style-type:none;
+    margin: 5px 32px;
+    padding: 10px;
+}
+.header__div__list__li{
+    display:inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.header__div__list__li--link{
+    position: relative;
+    text-decoration: none;
+    display: inline;
+}
+.header__div__list__li--image{
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background-position: top center;
+    width: 50px;
+    height: 50px;
+}
+/* -------------------------------INICIO PARTE DEL DESPLEGABLE------------------------------------------------ */
+.headerDesplegable{
+    display: flex;
+    flex-direction: column;
+    width: 32px;
+    height: 32px;
+    margin: 0px 32px;
+    align-items: center;
+}
+.headerDesplegable__link--img{
+    width: 32px;
+    height: 32px;
+}
+.headerDesplegable--link{
+    color: #9cffde;
+    position: absolute;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .2s ease-in-out;
+}
+.headerDesplegable__list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type:none;
+    background-color: #464646;
+    width: 256px;
+    border-radius: 0 0 5px 5px;
+    /* Arranca animacion */
+    opacity: 0;
+    transition: opacity .20s ease .1s;
+}
+.headerDesplegable__list__li{
+    display:inline-block;
+    margin: 16px auto;
+    padding-left: 16px;
+    overflow: hidden;
+    transition: height .25s ease .1s;
+}
+
+.headerDesplegable__list__li--link{
+    color: #9cffde;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    transition: color .2s ease-in-out;
+}    
+.headerDesplegable:hover > ul{opacity: 1;}
+.headerDesplegable:hover>ul li{
+    overflow: hidden;
+} 
+.headerDesplegable--link> ul li{
+    overflow: visible;
+    height: 36px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------FIN PARTE DEL DESPLEGABLE ------------------------------------------------------ */
+/* Mientras que todods los archivos tienen las mismas clases para el header y el footer, Los BODYs de cada html tienen la siguiente estructura: .archivoEtiqueta__etiqueta--elemento */
+/* SECCION DE BODYS */
+/* "main es lo mismo en todos los archivos" */
+body{
+    background-color: #dfdfdf;
+    font-family:'Roboto', sans-serif;
+}
+/*-------------------------------INDEX---------------------------*/
+.indexMain__presentacion{
+    display: grid;
+    background-color: #c7f7f7;
+    border-radius: 10px;
+    border: 2px solid #96c4c4;
+    grid-template-areas: 
+    "img h1 "
+    "h2 h2 "
+    "p p";
+    justify-items:center ;
+    padding-top: 32px;
+    margin: 5% 5%;
+}
+.imagen--presentacion{
+    width: 75%;
+    height: 75%;
+    grid-area: img;
+}
+.imagen--presentacion:hover{
+    transform:scale(20% 20%);
+}
+.indexMain__presentacion h1{
+    font-size: 400%;
+    grid-area: h1;
+    font-family: Helvetica,Arial,  sans-serif;
+}
+.indexMain__section__presentacion--h1{
+    font-family: 'lato',sans-serif;
+    color: #464646;
+    grid-area: h2;
+}
+.indexMain__section__presentacion--descripcion{
+    padding-top:5px ;
+    padding-bottom: 10px;
+    color: #464646;
+    grid-area: p;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.indexMain__cuerpo{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+    justify-content: flex-end;
+}
+.indexMain__cuerpo__div{
+    display: flex;
+    justify-content: center;
+}
+.izquierda{
+    border: 3px solid #000;
+    border-radius: 10px;
+    background-color: #464646;
+    margin-top:10px ;
+    margin-right: 10% ;
+    margin-bottom: 10px;
+    margin-left: 5%;
+}
+/* .izquierda:hover{
+    transform: translateX(20%);
+} */
+.derecha{
+    border: 3px solid #000;
+    background-color: #464646;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top:10px ;
+    margin-right: 5% ;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+/* .derecha:hover{
+    transform:translateX(-20%) ;
+} */
+.indexMain__cuerpo__div--imagenGimnasio{
+    display: inline;
+    border-radius: 10px;
+    width: 500px;
+    height: 200px;
+}
+.indexMain__cuerpo__div--p{
+    display: inline;
+    color: #000;
+}
+/*-------------------------------INDEX---------------------------*/
+
+
+
+
+
+
+/*-----------------------------------COMUNIDAD-----------------------  */
+.comunidadMain__section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-left: 40px;
+    margin-right:40px ;
+}
+#comunidadMain__section1--presentacionComunidad{
+    color: #1f1f1f;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.comunidadMain__section2{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows:repeat(2, 1fr) ;
+    justify-items: center;
+}
+.cajaContenido{
+    align-items: center;
+    text-align:center;
+    width:50%;
+    padding:20px;
+    border: 2px solid #000000;
+    border-radius:10px ;
+    background-color: #464646;
+    margin: 10px;
+    
+}
+.cajaContenido:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+#cajaContenidoConAOS:hover{
+    transform: scale(1.1);
+    transition: all 1s;
+}
+.cajaContenido img{
+    width:128px;
+    height: 128px;
+    border-radius: 10px
+}
+.cajaContenido p{
+    color: #000;
+    text-align: center;
+}
+.comunidadMain__section2__nav__div--link{
+    text-decoration: none;
+    color: #9cffde;
+}
+/*-----------------------------------COMUNIDAD-----------------------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------------BENEFICIOS--------------------------*/
+.beneficiosMain__section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#beneficiosMain__section--presentacionBeneficios{
+    width: 70%;
+    text-align: center;
+    line-height: 1,4;
+    border:2px double #000;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px ;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.beneficiosMain__section2__nav__div--image{
+    width: 64%;
+    height: 50%;
+    margin-left: 10% ;
+    margin-right: 5%;
+    border-radius: 10px;
+}
+.beneficiosMain__section2__nav{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    grid-template-rows: 33% 33%;
+    justify-items: center;
+}
+.beneficiosMain__section2__nav__div--p{
+    display: block;
+    margin: 8px 16px;
+}
+.beneficiosMain__section2__nav__div__list{
+    display: block;
+    margin: 8px 10px;
+    list-style-type: none;
+}
+/* SECCION 2 */
+/*-----------------------------BENEFICIOS--------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------SOFTWARE------------------------ */
+
+.softwareMain__section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#softwareMain__section1--presentacionSoftware{
+    font-size: 120%;
+    margin: 10px 16%;
+    border:2px double #000000;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.softwareMain__section2{
+    display: inline-block;
+    width: 100%;
+}
+.softwareMain__section2__nav{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+
+}
+.softwareMain__section2__nav__div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #171717;
+    border-radius: 10px;
+    background-color: #171717;
+    margin:5% 16%;
+}
+.softwareMain__section2__div--image{
+    border-radius: 10px;
+    margin:8px
+}
+.softwareMain__section2__div--p{
+    margin:8px ;
+    font-size: 90%;
+    border: #000000;
+    border-radius: 10px;
+    background-color: #464646;
+}
+.softwareMain__section2__div--h6{
+    display: inline-block;
+    border: 1px solid #000000;
+    border-radius: 32px;
+    font-size: 120;
+    background-color: #464646
+}
+/* ----------------------------------------SOFTWARE------------------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------SERVICIOS-------------------------------------------------  */
+.serviciosMain__sectionProgramas1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+.serviciosMain__sectionProgramas1__div{
+    text-align: center;
+    border: 2px solid #171717;
+    border-radius: 10px;
+    background-color: #292929;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+}
+.serviciosMain__sectionprogramas1__div--img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.serviciosMain__sectionProgramas1__div__p__ul{
+    list-style-type:none;
+    justify-content: space-evenly;
+    text-align: left;
+    margin: 4px;
+}
+.serviciosMain__sectionProgramas__div__p__ul__li{
+    margin: 4px;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.serviciosMain__section2_{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    justify-content: center;
+}
+.serviciosMain__section2__div{
+    display: flex;
+    align-items: center;
+    border:2px solid #000000;
+    border-radius: 10px;
+    margin:10px 50px;
+}
+.serviciosMain__section2__div--img{
+    display:inline-block;
+    width: 15%;
+    height: 15%;
+    border-radius: 10px;
+}
+.serviciosMain__section2__div--p{
+    display: inline-block;
+    width: 70%;
+    height: auto;
+}
+/* -------------------------------------------------------------------------------------------------------------------- */
+.serviciosMain__section3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+}
+.serviciosMain__section3__div--img{
+    width: 40%;
+    height: 40%;
+    border-radius: 10px;
+}
+.serviciosMain__section3__div__ul{
+    list-style-type: none;
+    text-align:left ;
+}
+/*----------------------------------------------SERVICIOS-------------------------------------------------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------CONTACTO ----------------------------------------- */
+.formulario{
+    background-color: #dfdfdf;
+    padding: 25%;
+    align-items: center;
+}
+.formulario form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #464646;
+}
+.row div{
+    margin:10px 10px
+}
+.form-control{
+    width:90%;
+    margin:auto;
+}
+.btn{
+    background-color: #96c4c4;
+    width: 50%;
+    margin:10px auto
+}
+/* -----------------------------------------------CONTACTO----------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECCION DE FOOTER */
+.footer{
+    height:auto ;
+    background:#292929;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding-bottom: 44px;
+}
+/* Parte izquierda del footer, "herramientas" */
+.footer__divIzquierdo{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin:16px;
+}
+.footer__divIzquierdo__navPNG{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}   
+.footer__divIzquierdo__navPNG__list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #9cffde;
+}
+.footer__divIzquierdo__navPNG__list__li{
+    display: inline;
+    margin-left: 32px;
+    margin-right:32px ;
+    position: relative;
+}
+.footer__divIzquierdo__navPNG__list__li__link{
+    text-decoration: none;
+}
+.footer__divIzquierdo__navPNG__list__li__link--png{
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+}
+.footer__divIzquierdo__navHerramientas{
+    margin-left: 64px;
+}
+.footer__divIzquierdo__navHerramientas__list{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    justify-content: space-around;
+    list-style-type:none;
+}
+.footer__divIzquierdo__navHerramientas__list__li{
+    margin: 4px 0px;
+    font-family: "Roboto",sans-serif;
+    color: #9cffde;
+}
+/* Parte derecha del footer, "socios" */
+.footer__divDerecho{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footer__divDerecho__nav__list{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.footer__divDerecho__nav__list__li{
+    display: inline-block;
+    margin:10px 16px;
+    align-items: center;
+}
+.footer__divDerecho__nav__list__li--image{
+    width: 128px;
+    height: 64px;
+    border: 1px solid #dfdfdf;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------RESPONSIVE------------------------------------------------ */
+@media only screen and (max-width:600px){ /*VISTA MOBILE*/
+    .header__div{width:100% }
+    .indexMain__presentacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin:5% 5%;
+        width: 95%;
+    }
+    .indexMain__cuerpo__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .indexMain__cuerpo__div--imagenGimnasio{
+        width: 50%;
+        height: 70%;
+    }
+    .comunidadMain__section2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .comunidadMain__section2__nav{
+        width: 50%;
+    }
+    
+    .beneficiosMain__section2__nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .beneficiosMain__section1--img{
+        width: 500px;
+        height: auto;
+    }
+    .softwareMain__section2__nav{
+        display:flex;
+        flex-direction: column;
+    }
+    .serviciosMain__sectionProgramas1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .serviciosMain__sectionProgramas1 div{
+        width: 300px;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: auto;
+        padding: 10px 0px 60px 0px;
+    }
+    .footer__divIzquierdo{
+        margin: 10% 0%;
+        background-color: #292929;
+        width: 100%;
+        height: 50%;
+    }
+    .footer__divDerecho{
+        height: 50%
+    }
+    .footer__divDerecho__nav{
+        height: 100%;
+
+    }
+    .footer__divDerecho__nav__list__li--image{
+        width: 100px;
+        height:50px;
+    }
+
+}
